@@ -53,13 +53,7 @@ const Banner = () => {
 
         {/* Banner image start*/}
         <figure className="flex justify-end items-center">
-          <img
-            src={bannerImage}
-            width="587"
-            height="839"
-            alt="hero banner"
-            class="shrink-0"
-          />
+          <img src={bannerImage} alt="hero banner" class="shrink-0" />
         </figure>
         {/* Banner image end*/}
       </div>
