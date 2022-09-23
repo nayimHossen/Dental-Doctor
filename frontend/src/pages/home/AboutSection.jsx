@@ -3,11 +3,11 @@ import aboutBanner from "./../../assets/images/about-banner.png";
 
 const AboutSection = () => {
   return (
-    <section aria-label="aboutSection" className="py-10">
-      <div className="grid lg:grid-cols-2 justify-center items-center gap-2 container mx-auto">
+    <section aria-label="aboutSection" className="py-16">
+      <div className="grid lg:grid-cols-2 justify-center items-center px-5 gap-2 container mx-auto">
         {/* About section image start*/}
-        <figure className="flex justify-center items-center">
-          <img src={aboutBanner} alt="hero banner" class="w-full lg:w-[70%]" />
+        <figure className="flex justify-start items-center sm:mb-5">
+          <img src={aboutBanner} alt="hero banner" class="w-full lg:w-[85%]" />
         </figure>
         {/* About section image end*/}
 

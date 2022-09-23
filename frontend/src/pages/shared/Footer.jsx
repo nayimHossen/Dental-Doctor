@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="bg-accent pt-7 pb-10">
-        <div class="grid  sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
+        <div class="grid px-5 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
           <div>
             <div>
               <div>

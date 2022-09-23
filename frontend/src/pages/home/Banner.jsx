@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <section
       aria-label="hero"
-      className="py-10"
+      className="pb-16 bt-10"
       style={{
         background: `url(${bannerBg})`,
         backgroundPosition: "center",
@@ -14,7 +14,7 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="grid md:grid-cols-2 justify-center items-center gap-2 container mx-auto">
+      <div className="grid md:grid-cols-2 justify-center items-center gap-2 container mx-auto px-5">
         {/* Banner info data start */}
         <div className="flex justify-center items-center">
           <div>
@@ -42,7 +42,7 @@ const Banner = () => {
 
               <button
                 type="submit"
-                className="text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary p-5 rounded-md w-full mt-1"
+                className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary rounded-md w-full mt-1"
               >
                 GET CALL BACK
               </button>

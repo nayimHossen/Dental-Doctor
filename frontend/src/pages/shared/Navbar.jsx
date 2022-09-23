@@ -9,7 +9,7 @@ const Navbar = () => {
     <header>
       {/* Top mini navbar start*/}
       <div className="bg-accent py-3 hidden md:block">
-        <div className="flex justify-between container mx-auto">
+        <div className="flex justify-between container mx-auto px-5">
           <div>
             <ul className="flex gap-3">
               <li className="flex justify-center items-center gap-2">
@@ -48,8 +48,8 @@ const Navbar = () => {
       {/* Top mini navbar end*/}
 
       {/* navbar */}
-      <nav>
-        <div className="flex justify-between items-center py-5 container mx-auto relative">
+      <nav className="sm:bg-[#F7FAFD] bg-base-100 shadow-sm">
+        <div className="flex justify-between items-center py-5 container mx-auto relative px-5">
           {/* md and lg navigation start*/}
           <div>
             <Link to="/">
@@ -58,9 +58,9 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:block">
-            <div className="flex justify-between items-center md:gap-10 lg:gap-16">
+            <div className="flex justify-between items-center md:gap-4 lg:gap-16">
               <div>
-                <ul className="flex md:gap-5 lg:gap-10">
+                <ul className="flex md:gap-3 lg:gap-10">
                   <li className="font-bold">
                     <NavLink to="/home">Home</NavLink>
                   </li>
