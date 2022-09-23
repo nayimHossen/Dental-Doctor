@@ -2,15 +2,10 @@ import doctor from "../../assets/images/cta-banner.png";
 
 function BookAppiontment() {
   return (
-    <section className="bg-accent mb-5" aria-label="cta">
+    <section className="bg-accent mb-5 pt-5" aria-label="cta">
       <div className="grid md:grid-cols-2 justify-center items-center px-5 gap-5 container mx-auto">
         <div>
-          <img
-            src={doctor}
-            className="mt-[-120px]"
-            alt="cta banner"
-            class="w-100"
-          />
+          <img src={doctor} className="mt-[-110px] w-100" alt="cta banner" />
         </div>
 
         <div>
