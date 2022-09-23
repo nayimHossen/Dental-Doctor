@@ -7,6 +7,7 @@ const Navbar = () => {
 
   return (
     <header>
+      {/* Top mini navbar start*/}
       <div className="bg-accent py-3 hidden md:block">
         <div className="flex justify-between container mx-auto">
           <div>
@@ -44,9 +45,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* Top mini navbar end*/}
 
+      {/* navbar */}
       <nav>
         <div className="flex justify-between items-center py-5 container mx-auto relative">
+          {/* md and lg navigation start*/}
           <div>
             <Link to="/">
               <h2 className="text-4xl font-bold text-accent">Dentelo.</h2>
@@ -82,11 +86,13 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+          {/* md and lg navigation end*/}
 
+          {/* Mobile navigation bar start*/}
           <label className="btn btn-circle swap swap-rotate md:hidden">
             <input type="checkbox" onClick={() => setCheckbox(!checkbox)} />
             <svg
-              className="swap-off fill-current"
+              className="swap-off"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -95,7 +101,7 @@ const Navbar = () => {
               <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
             </svg>
             <svg
-              className="swap-on fill-current"
+              className="swap-on"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -131,6 +137,7 @@ const Navbar = () => {
               </ul>
             </div>
           )}
+          {/* Mobile navigation bar end*/}
         </div>
       </nav>
     </header>
