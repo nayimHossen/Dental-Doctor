@@ -42,7 +42,7 @@ const Banner = () => {
 
               <button
                 type="submit"
-                className="text-base-100 bg-gradient-to-r from-secondary to-primary p-5 rounded-md w-full mt-1"
+                className="text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary p-5 rounded-md w-full mt-1"
               >
                 GET CALL BACK
               </button>

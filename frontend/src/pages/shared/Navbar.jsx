@@ -80,7 +80,7 @@ const Navbar = () => {
               </div>
 
               <div>
-                <button className="btn text-base-100 bg-gradient-to-r from-secondary to-primary px-7">
+                <button className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary px-7">
                   BOOK APPOINTMENT
                 </button>
               </div>
