@@ -1,4 +1,5 @@
 import doctor from "../../assets/images/cta-banner.png";
+import { Link } from "react-router-dom";
 
 const BookAppiontment = () => {
   return (
@@ -21,9 +22,12 @@ const BookAppiontment = () => {
             aut illo doloribus quaerat explicabo, assumenda consectetur est vel
             ad sed maiores doloremque consequatur.
           </p>
-          <button className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary mb-5">
+          <Link
+            to="appointment"
+            className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary mb-5"
+          >
             Book appointment
-          </button>
+          </Link>
         </div>
       </div>
     </section>

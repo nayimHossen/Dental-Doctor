@@ -60,29 +60,36 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="flex justify-between items-center md:gap-4 lg:gap-16">
               <div>
-                <ul className="flex md:gap-3 lg:gap-10">
+                <ul className="flex md:gap-3 lg:gap-6">
                   <li className="font-bold">
-                    <NavLink to="/home">Home</NavLink>
+                    <NavLink to="home">Home</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="/services">Services</NavLink>
+                    <NavLink to="about">About</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="/about">About Us</NavLink>
+                    <NavLink to="review">Reviews</NavLink>
+                  </li>
+
+                  <li className="font-bold">
+                    <NavLink to="blogs">Blogs</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="/blog">Blogs</NavLink>
+                    <NavLink to="contact">Contact</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="login">Login</NavLink>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <button className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary px-7">
+                <Link
+                  to="appointment"
+                  className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary px-7"
+                >
                   BOOK APPOINTMENT
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -118,21 +125,27 @@ const Navbar = () => {
                   <NavLink to="/home">Home</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/services">Services</NavLink>
-                </li>
-                <li className="font-bold">
                   <NavLink to="/about">About Us</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/blog">Blogs</NavLink>
+                  <NavLink to="review">Reviews</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/contact">Contact</NavLink>
+                  <NavLink to="blogs">Blogs</NavLink>
+                </li>
+                <li className="font-bold">
+                  <NavLink to="contact">Contact Us</NavLink>
+                </li>
+                <li className="font-bold">
+                  <NavLink to="login">Login</NavLink>
                 </li>
                 <li>
-                  <button className="btn text-base-100 bg-gradient-to-r from-secondary to-primary px-7">
+                  <Link
+                    to="appointment"
+                    className="btn text-base-100 bg-gradient-to-r from-secondary to-primary px-7"
+                  >
                     BOOK APPOINTMENT
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </div>
