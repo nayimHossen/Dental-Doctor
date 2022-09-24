@@ -15,7 +15,7 @@ const BookAppiontment = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-base-100 mb-2 md:mb-4 lg:mb-6">
             We Are open And Welcoming Patients
           </h1>
-          <p className="text-white mb-5">
+          <p className="text-base-100 mb-5">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
             earum ab cupiditate autem accusantium expedita sequi, temporibus,
             aut illo doloribus quaerat explicabo, assumenda consectetur est vel

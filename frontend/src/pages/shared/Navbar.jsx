@@ -89,7 +89,7 @@ const Navbar = () => {
           {/* md and lg navigation end*/}
 
           {/* Mobile navigation bar start*/}
-          <label className="btn btn-circle swap swap-rotate md:hidden">
+          <label className="btn bg-white hover:bg-white px-3 swap swap-rotate border-2 md:hidden">
             <input type="checkbox" onClick={() => setCheckbox(!checkbox)} />
             <svg
               className="swap-off"

@@ -1,15 +1,13 @@
 const Service = ({ service }) => {
   const { designation, title, img } = service;
   return (
-    <div>
-      <div className="flex bg-base-100 shadow-xl gap-3 px-5 py-8 justify-start items-center">
-        <div>
-          <img src={img} alt="" />
-        </div>
-        <div className="">
-          <h2 className="card-title">{title}</h2>
-          <p>{designation}</p>
-        </div>
+    <div className="flex justify-start items-center border-2 bg-base-100 shadow-xl gap-4 px-5 py-8 ">
+      <div>
+        <img src={img} alt="" />
+      </div>
+      <div className="">
+        <h2 className="font-bold text-xl md:text-2xl">{title}</h2>
+        <p className="font-medium text-natural">{designation}</p>
       </div>
     </div>
   );
