@@ -4,16 +4,18 @@ import Banner from "./Banner";
 import BookAppiontment from "./BookAppiontment";
 import Doctors from "./Doctors";
 import Blogs from "./Blogs";
+import Services from "./Services";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
+      <Services />
       <AboutSection />
       <Doctors />
       <BookAppiontment />
       <Blogs />
-    </div>
+    </>
   );
 };
 
