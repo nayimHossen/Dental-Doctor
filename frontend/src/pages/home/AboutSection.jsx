@@ -14,10 +14,10 @@ const AboutSection = () => {
         {/* About section info data start */}
         <div className="flex justify-center items-center">
           <div>
-            <p className="text-base md:text-xl lg:text-2xl font-bold uppercase text-primary mb-2 md:mb-3 lg:mb-5">
+            <p className="text-base md:text-xl lg:text-2xl font-bold uppercase text-primary mb-1 md:mb-3 lg:mb-4">
               About Us
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-3 md:mb-5 lg:mb-10">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-3 md:mb-5 lg:mb-8">
               We Care For Your Dental Health
             </h1>
             <p className="text-base text-neutral mb-5">

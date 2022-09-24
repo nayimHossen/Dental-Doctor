@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-3xl font-bold">Others Links</h2>
+            <h2 className="text-2xl font-bold">Others Links</h2>
             <ul className="mt-5">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
                 <i class="ri-add-line text-primary"></i>
@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl font-bold">Our Services</h2>
+            <h2 className="text-2xl font-bold">Our Services</h2>
             <ul className="mt-5">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
                 <i class="ri-add-line text-primary"></i>
@@ -84,7 +84,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-5">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-5">Contact Us</h2>
 
             <div className="flex justify-start items-center gap-3 mb-3">
               <i class="ri-map-pin-line text-3xl bg-primary p-2 rounded"></i>
