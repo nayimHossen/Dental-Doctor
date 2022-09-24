@@ -33,11 +33,11 @@ function Doctors() {
   ];
   return (
     <section className="container mx-auto px-5 pt-16 pb-32">
-      <div className="text-center">
+      <div className="text-center mb-3 md:mb-8 lg:mb-16">
         <p className="text-base md:text-xl lg:text-2xl font-bold uppercase text-primary mb-1 md:mb-3 lg:mb-4">
           OUR DOCTORS
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-3 md:mb-5 lg:mb-8">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           Best Expert Dentist
         </h1>
       </div>
