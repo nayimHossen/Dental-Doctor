@@ -119,7 +119,7 @@ const Navbar = () => {
           </label>
 
           {checkbox && (
-            <div className="absolute top-20 inset-x-4">
+            <div className="absolute top-20 inset-x-4 z-10">
               <ul className="menu bg-base-100 shadow-lg rounded-box w-full p-2">
                 <li className="font-bold">
                   <NavLink to="/home">Home</NavLink>
