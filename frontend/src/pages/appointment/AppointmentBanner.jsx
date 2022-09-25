@@ -8,7 +8,7 @@ const AppointmentBanner = ({ date, setDate }) => {
       className="bg-center bg-cover"
       style={{ backgroundImage: `url("${appointmentBannerImg}")` }}
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-16 container mx-auto px-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-16 container mx-auto px-5">
         <div></div>
 
         {/* Date piker calander start*/}

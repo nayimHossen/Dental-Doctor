@@ -13,13 +13,13 @@ const Navbar = () => {
           <div>
             <ul className="flex gap-3">
               <li className="flex justify-center items-center gap-2">
-                <i class="ri-mail-line text-secondary"></i>
+                <i className="ri-mail-line text-secondary"></i>
                 <Link to="mailto:info@example.com" className="text-base-100">
                   info@example.com
                 </Link>
               </li>
               <li className="flex justify-center items-center gap-2">
-                <i class="ri-phone-line text-secondary"></i>
+                <i className="ri-phone-line text-secondary"></i>
                 <Link to="tel:+917052101786" className="text-base-100">
                   +91-7052-101-786
                 </Link>

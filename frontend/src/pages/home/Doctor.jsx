@@ -17,17 +17,17 @@ const Doctor = ({ doctor }) => {
           <ul className="flex gap-5 justify-center items-center">
             <li>
               <Link to="#">
-                <i class="ri-facebook-circle-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
+                <i className="ri-facebook-circle-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="ri-twitter-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
+                <i className="ri-twitter-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="ri-instagram-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
+                <i className="ri-instagram-fill bg-[#ddd] hover:bg-primary hover:text-base-100 text-primary text-2xl rounded-full p-2 cursor-pointer"></i>
               </Link>
             </li>
           </ul>

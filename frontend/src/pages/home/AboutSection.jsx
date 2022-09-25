@@ -7,7 +7,11 @@ const AboutSection = () => {
       <div className="grid lg:grid-cols-2 justify-center items-center px-5 gap-2 container mx-auto">
         {/* About section image start*/}
         <figure className="flex justify-start items-center sm:mb-5">
-          <img src={aboutBanner} alt="hero banner" class="w-full lg:w-[85%]" />
+          <img
+            src={aboutBanner}
+            alt="hero banner"
+            className="w-full lg:w-[85%]"
+          />
         </figure>
         {/* About section image end*/}
 

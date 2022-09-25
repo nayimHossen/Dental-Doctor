@@ -37,7 +37,7 @@ const Banner = () => {
                 aria-label="email"
                 placeholder="Your Email Address..."
                 required
-                class="input input-bordered input-lg w-full outline-none bg-[#f0f0f0]"
+                className="input input-bordered input-lg w-full outline-none bg-[#f0f0f0]"
               />
 
               <button
@@ -53,7 +53,7 @@ const Banner = () => {
 
         {/* Banner image start*/}
         <figure className="flex justify-end items-center">
-          <img src={bannerImage} alt="hero banner" class="shrink-0" />
+          <img src={bannerImage} alt="hero banner" className="shrink-0" />
         </figure>
         {/* Banner image end*/}
       </div>

@@ -15,7 +15,7 @@ const Blog = ({ blog }) => {
 
         {/* Date badge */}
         <div className="flex gap-2 badge-primary bottom-8 left-5 text-base-100 p-2 rounded absolute">
-          <i class="ri-calendar-todo-fill"></i>
+          <i className="ri-calendar-todo-fill"></i>
           <p>24th March 2022</p>
         </div>
       </figure>

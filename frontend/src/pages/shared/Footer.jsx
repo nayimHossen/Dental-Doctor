@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="pt-16">
       <div className="bg-accent py-16">
-        <div class="grid px-5 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
+        <div className="grid px-5 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
           <div>
             <div>
               <div>
@@ -21,7 +21,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex justify-start items-center gap-3">
-                <i class="ri-time-line text-3xl bg-primary p-2 rounded"></i>
+                <i className="ri-time-line text-3xl bg-primary p-2 rounded"></i>
                 <div className="text-neutral">
                   <h2>Monday-Saturday:</h2>
                   <h2>9:00am-10:00pm</h2>
@@ -33,23 +33,23 @@ const Footer = () => {
             <h2 className="text-2xl font-bold">Others Links</h2>
             <ul className="mt-5">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="/home">Home</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="/about">About Us</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="/services">Services</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="/blog">Blogs</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="/contact">Contact</Link>
               </li>
             </ul>
@@ -58,27 +58,27 @@ const Footer = () => {
             <h2 className="text-2xl font-bold">Our Services</h2>
             <ul className="mt-5">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Root Canal</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Alignment Teeth</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Cosmetic Teeth</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Oral Hygiene</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Cavity Inspection</Link>
               </li>
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
-                <i class="ri-add-line text-primary"></i>
+                <i className="ri-add-line text-primary"></i>
                 <Link to="#">Live Advisory</Link>
               </li>
             </ul>
@@ -87,7 +87,7 @@ const Footer = () => {
             <h2 className="text-2xl font-bold mb-5">Contact Us</h2>
 
             <div className="flex justify-start items-center gap-3 mb-3">
-              <i class="ri-map-pin-line text-3xl bg-primary p-2 rounded"></i>
+              <i className="ri-map-pin-line text-3xl bg-primary p-2 rounded"></i>
               <div className="text-neutral">
                 <h4>1247/Plot No. 39, 15th Phase</h4>
                 <h2>LHB Colony, Kanpur</h2>
@@ -95,14 +95,14 @@ const Footer = () => {
             </div>
 
             <div className="flex justify-start items-center gap-3 mb-3">
-              <i class="ri-phone-fill text-3xl bg-primary p-2 rounded"></i>
+              <i className="ri-phone-fill text-3xl bg-primary p-2 rounded"></i>
               <div className="text-neutral">
                 <h4>+91-7052-101-786</h4>
               </div>
             </div>
 
             <div className="flex justify-start items-center gap-3 mb-3">
-              <i class="ri-mail-line text-3xl bg-primary p-2 rounded"></i>
+              <i className="ri-mail-line text-3xl bg-primary p-2 rounded"></i>
               <div className="text-neutral">
                 <h4>help@example.com</h4>
               </div>
