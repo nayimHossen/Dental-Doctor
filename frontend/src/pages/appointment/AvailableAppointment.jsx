@@ -22,7 +22,9 @@ const AvailableAppointment = ({ date }) => {
         </p>
         <h1 className="text-accent text-2xl md:text-3xl lg:text-4xl font-bold">
           Available Appointment On:{" "}
-          <span className="text-warning">{format(date, `PP`)}</span>
+          <span className="text-warning">
+            {format(date || new Date(), `PP`)}
+          </span>
         </h1>
       </div>
 
