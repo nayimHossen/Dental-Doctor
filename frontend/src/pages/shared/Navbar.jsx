@@ -48,7 +48,7 @@ const Navbar = () => {
       {/* Top mini navbar end*/}
 
       {/* navbar */}
-      <nav className="sm:bg-[#F7FAFD] bg-base-100 shadow-sm">
+      <nav className="sm:bg-[#F7FAFD] bg-base-100">
         <div className="flex justify-between items-center py-5 container mx-auto relative px-5">
           {/* md and lg navigation start*/}
           <div>

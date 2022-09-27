@@ -1,9 +1,10 @@
 import React from "react";
+import AboutSection from "../home/AboutSection";
 
 const About = () => {
   return (
     <div>
-      <h2>This is about</h2>
+      <AboutSection />
     </div>
   );
 };
