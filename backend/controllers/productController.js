@@ -13,14 +13,17 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 });
 
 //GET ALL PRODUCTS
-exports.getAllProducts = async (req, res, next) => {
+exports.getAllProducts = catchAsyncError(async (req, res, next) => {
+  const productCount = await Product.countDocuments();
+
   const products = await Product.find();
 
   res.status(200).json({
     success: true,
     products,
+    productCount,
   });
-};
+});
 
 //GET PRODUCT details
 exports.getProductDetail = catchAsyncError(async (req, res, next) => {
