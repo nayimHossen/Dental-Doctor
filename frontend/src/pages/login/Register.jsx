@@ -14,8 +14,8 @@ const Register = () => {
   };
 
   return (
-    <div className="flex py-16 px-2 justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="flex pt-8 sm:pt-16  px-2 justify-center items-center">
+      <div className="card w-96 bg-base-100 shadow-xl border-2">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Registr</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -131,9 +131,9 @@ const Register = () => {
           </form>
           <p>
             <small>
-              Alrady Have an account ?{" "}
+              Alrady have an account?{" "}
               <Link className="text-primary hover:underline" to="/login">
-                Please Login
+                please login
               </Link>
             </small>
           </p>

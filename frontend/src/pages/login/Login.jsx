@@ -14,8 +14,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex px-2 py-16 justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="flex px-2 pt-8 sm:pt-16 justify-center items-center">
+      <div className="card w-96 bg-base-100 shadow-lg border-2">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -100,7 +100,7 @@ const Login = () => {
             <small>
               New at this website{"  "}
               <Link className="text-primary hover:underline" to="/register">
-                Create New Account
+                create an account
               </Link>
             </small>
           </p>

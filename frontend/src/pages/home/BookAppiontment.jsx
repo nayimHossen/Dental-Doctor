@@ -23,7 +23,7 @@ const BookAppiontment = () => {
             ad sed maiores doloremque consequatur.
           </p>
           <Link
-            to="appointment"
+            to="/appointment"
             className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary mb-5"
           >
             Book appointment
