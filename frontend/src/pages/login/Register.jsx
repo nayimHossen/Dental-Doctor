@@ -1,6 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../shared/Loading";
+import {
+  useSignInWithGoogle,
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Register = () => {
   const {
@@ -9,8 +16,37 @@ const Register = () => {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const navigate = useNavigate();
+
+  let signUpError;
+
+  if (loading || gLoading || updating) {
+    return <Loading />;
+  }
+
+  if (error || gError || updateError) {
+    signUpError = (
+      <p className="text-red-500 text-sm">
+        {error?.message || gError?.message || updateError?.message}
+      </p>
+    );
+  }
+
+  if (user || gUser) {
+    console.log(user || gUser);
+  }
+
+  const onSubmit = async (data) => {
+    createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    navigate("/appointment");
   };
 
   return (
@@ -25,11 +61,11 @@ const Register = () => {
                 <span className="label-text">Your Name</span>
               </label>
               <input
-                name="fname"
+                name="name"
                 type="text"
                 placeholder="Your Email"
                 className="input input-bordered w-full max-w-xs"
-                {...register("fname", {
+                {...register("name", {
                   required: {
                     value: true,
                     message: "Name is Required",
@@ -37,14 +73,14 @@ const Register = () => {
                 })}
               />
               <label className="label p-[2px]">
-                {errors.fname?.type === "required" && (
+                {errors.name?.type === "required" && (
                   <span className="label-text-alt text-red-500">
-                    {errors.fname.message}
+                    {errors.name.message}
                   </span>
                 )}
                 {errors.email?.type === "pattern" && (
                   <span className="label-text-alt text-red-500">
-                    {errors.fname.message}
+                    {errors.name.message}
                   </span>
                 )}
               </label>
@@ -123,6 +159,7 @@ const Register = () => {
             {/* Password Input filed start */}
 
             {/* Login Button */}
+            {signUpError}
             <input
               className="btn btn-primary w-full max-w-xs text-white"
               type="submit"
@@ -138,7 +175,12 @@ const Register = () => {
             </small>
           </p>
           <div className="divider m-0">OR</div>
-          <button className="btn btn-outline">Continue with Google</button>
+          <button
+            onClick={() => signInWithGoogle()}
+            className="btn btn-outline"
+          >
+            Continue with Google
+          </button>
         </div>
       </div>
     </div>

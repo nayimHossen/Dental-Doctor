@@ -1,9 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
+import Loading from "../shared/Loading";
 
 const Navbar = () => {
   const [checkbox, setCheckbox] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <header>
@@ -78,7 +87,11 @@ const Navbar = () => {
                     <NavLink to="contact">Contact</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="login">Login</NavLink>
+                    {user ? (
+                      <button onClick={() => signOut(auth)}>Logout</button>
+                    ) : (
+                      <NavLink to="login">Login</NavLink>
+                    )}
                   </li>
                 </ul>
               </div>
