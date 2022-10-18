@@ -1,8 +1,9 @@
 const Service = require("../models/serviceModel");
+const Booking = require("../models/bookingModel");
 const ErrorHandler = require("../utlis/errorHandler");
 const catchAsyncError = require("../middleware/catchAsyncError");
 
-//CREATE PRODUCT -- ADMIN
+//CREATE SERVICES -- ADMIN
 exports.createService = catchAsyncError(async (req, res, next) => {
   const service = await Service.create(req.body);
 
@@ -12,7 +13,7 @@ exports.createService = catchAsyncError(async (req, res, next) => {
   });
 });
 
-//GET ALL PRODUCTS
+//GET ALL SERVICES
 exports.getAllServices = catchAsyncError(async (req, res, next) => {
   const serviceCount = await Service.countDocuments();
 
@@ -25,7 +26,32 @@ exports.getAllServices = catchAsyncError(async (req, res, next) => {
   });
 });
 
-//GET PRODUCT details
+//GET AVAILABLE SERVICES
+exports.getAvailableServices = catchAsyncError(async (req, res, next) => {
+  const date = req.query.date;
+
+  const services = await Service.find();
+
+  const bookings = await Booking.find({ appointmentDate: date });
+
+  services.forEach((service) => {
+    const serviceBookings = bookings.filter(
+      (book) => book.treatmentName === service.name
+    );
+    const bookedSlots = serviceBookings.map((book) => book.timeSlot);
+    const available = service.slots.filter(
+      (slot) => !bookedSlots.includes(slot)
+    );
+    service.slots = available;
+  });
+
+  return res.status(200).json({
+    success: true,
+    services,
+  });
+});
+
+//GET SERVICES details
 exports.getServiceDetail = catchAsyncError(async (req, res, next) => {
   const service = await Service.findById(req.params.id);
 
@@ -39,7 +65,7 @@ exports.getServiceDetail = catchAsyncError(async (req, res, next) => {
   });
 });
 
-//UPDATE PRODUCTS -- ADMIN
+//UPDATE SERVICES -- ADMIN
 exports.updateService = catchAsyncError(async (req, res, next) => {
   let service = await Product.findById(req.params.id);
 
@@ -59,7 +85,7 @@ exports.updateService = catchAsyncError(async (req, res, next) => {
   });
 });
 
-//DELETE PRODUCTS -- ADMIN
+//DELETE SERVICES -- ADMIN
 exports.deleteService = catchAsyncError(async (req, res, next) => {
   const service = await Service.findById(req.params.id);
 

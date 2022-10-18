@@ -1,18 +1,32 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import Service from "./Service";
 import Booking from "./Booking";
+import Loading from "../shared/Loading";
+import { toast } from "react-toastify";
 
 const AvailableAppointment = ({ date }) => {
-  const [services, setServices] = useState([]);
   const [treatment, setTreatment] = useState(null);
+  const formatedDate = format(date, `PP`);
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/api/v1/services`)
-      .then((res) => res.json())
-      .then((data) => setServices(data.services));
-  }, []);
+  const {
+    data: services,
+    isLoading,
+    error,
+    refetch,
+  } = useQuery(["available", formatedDate], () =>
+    fetch(`http://localhost:5000/api/v1/available?date=${formatedDate}`).then(
+      (res) => res.json()
+    )
+  );
+
+  if (isLoading) {
+    return <Loading />;
+  }
+  if (error) {
+    toast.error(error);
+  }
 
   return (
     <div>
@@ -29,7 +43,7 @@ const AvailableAppointment = ({ date }) => {
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-5">
-        {services.map((service) => (
+        {services?.services.map((service) => (
           <Service
             key={service._id}
             service={service}
@@ -42,6 +56,7 @@ const AvailableAppointment = ({ date }) => {
           date={date}
           treatment={treatment}
           setTreatment={setTreatment}
+          refetch={refetch}
         />
       )}
     </div>
