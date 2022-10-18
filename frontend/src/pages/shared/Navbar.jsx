@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
@@ -7,6 +7,26 @@ import { signOut } from "firebase/auth";
 import Loading from "../shared/Loading";
 
 const Navbar = () => {
+  // navbar sticky to when scroll start
+  const [stickyClass, setStickyClass] = useState("relative");
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 151
+        ? setStickyClass("fixed top-0 left-0 z-50 bg-white shadow-lg")
+        : setStickyClass("relative");
+    }
+  };
+  // navbar sticky to when scroll end
   const [checkbox, setCheckbox] = useState(false);
   const [user, loading, error] = useAuthState(auth);
 
@@ -57,7 +77,7 @@ const Navbar = () => {
       {/* Top mini navbar end*/}
 
       {/* navbar */}
-      <nav className="sm:bg-[#F7FAFD] bg-base-100">
+      <nav className={`w-full sm:bg-[#F7FAFD] bg-base-100 ${stickyClass}`}>
         <div className="flex justify-between items-center py-5 container mx-auto relative px-5">
           {/* md and lg navigation start*/}
           <div>
