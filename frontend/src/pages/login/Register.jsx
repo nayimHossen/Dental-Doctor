@@ -40,7 +40,7 @@ const Register = () => {
   }
 
   if (user || gUser) {
-    console.log(user || gUser);
+    // console.log(user || gUser);
   }
 
   const onSubmit = async (data) => {

@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   // navbar sticky to when scroll end
   const [checkbox, setCheckbox] = useState(false);
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
 
   if (loading) {
     return <Loading />;
@@ -119,7 +119,7 @@ const Navbar = () => {
               <div>
                 <Link
                   to="appointment"
-                  className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary px-7"
+                  className="btn text-base-100 text-sm uppercase font-bold bg-gradient-to-r from-accent to-primary px-7"
                 >
                   BOOK APPOINTMENT
                 </Link>

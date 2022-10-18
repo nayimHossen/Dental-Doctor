@@ -10,8 +10,9 @@ app.use(cors());
 
 //ROUTE IMPORT
 const serviceRoute = require("./routes/serviceRoute");
+const bookingRoute = require("./routes/bookingRoute");
 
-app.use("/api/v1", serviceRoute);
+app.use("/api/v1", serviceRoute, bookingRoute);
 
 //MIDDLEWARE FOR ERROR
 app.use(errorMiddleware);
