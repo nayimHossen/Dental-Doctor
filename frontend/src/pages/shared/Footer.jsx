@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="pt-16">
+    <footer>
       <div className="bg-accent py-16">
         <div className="grid px-5 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
           <div>
@@ -114,8 +114,9 @@ const Footer = () => {
       <div className="p-4 bg-[#222] text-base-100">
         <div className="flex justify-center items-center">
           <p>
-            <small>Copyright © 2022 - All right reserved:</small>{" "}
-            mail.nayimhossen@gmail
+            <small>
+              Copyright © 2022 - All right reserved: mail.nayimhossen@gmail.com
+            </small>
           </p>
         </div>
       </div>

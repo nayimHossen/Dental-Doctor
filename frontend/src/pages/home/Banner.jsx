@@ -30,22 +30,24 @@ const Banner = () => {
               tristique, commodo gravida lectus non.
             </p>
 
-            <form action="" className="bg-base-100 shadow-lg p-4 rounded-lg">
+            <form
+              action=""
+              className="bg-base-100 shadow-lg p-4 rounded-lg flex flex-col sm:flex-row gap-2"
+            >
               <input
                 type="email"
                 name="email_address"
                 aria-label="email"
                 placeholder="Your Email Address..."
                 required
-                className="input input-bordered input-lg w-full outline-none bg-[#f0f0f0]"
+                className="input input-bordered input-lg w-full sm:w-[70%] outline-none bg-[#f0f0f0]"
               />
 
-              <button
+              <input
                 type="submit"
-                className="btn text-base-100 uppercase font-bold bg-gradient-to-r from-accent to-primary rounded-md w-full mt-1"
-              >
-                GET CALL BACK
-              </button>
+                value="GET INFO"
+                className="btn text-base-100 py-6 uppercase font-bold bg-gradient-to-r from-accent to-primary w-full sm:w-[30%] h-full rounded-md"
+              />
             </form>
           </div>
         </div>

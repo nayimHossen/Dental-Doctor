@@ -34,6 +34,8 @@ const Navbar = () => {
     return <Loading />;
   }
 
+  // active link
+
   return (
     <header>
       {/* Top mini navbar start*/}
@@ -77,7 +79,7 @@ const Navbar = () => {
       {/* Top mini navbar end*/}
 
       {/* navbar */}
-      <nav className={`w-full sm:bg-[#F7FAFD] bg-base-100 ${stickyClass}`}>
+      <nav className={`w-full bg-[#F7FAFD] ${stickyClass}`}>
         <div className="flex justify-between items-center py-5 container mx-auto relative px-5">
           {/* md and lg navigation start*/}
           <div>
@@ -97,15 +99,16 @@ const Navbar = () => {
                     <NavLink to="about">About</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="review">Reviews</NavLink>
-                  </li>
-
-                  <li className="font-bold">
                     <NavLink to="blogs">Blogs</NavLink>
                   </li>
                   <li className="font-bold">
                     <NavLink to="contact">Contact</NavLink>
                   </li>
+                  {user && (
+                    <li className="font-bold">
+                      <NavLink to="/dashboard">Dashboard</NavLink>
+                    </li>
+                  )}
                   <li className="font-bold">
                     {user ? (
                       <button onClick={() => signOut(auth)}>Logout</button>
@@ -119,7 +122,7 @@ const Navbar = () => {
               <div>
                 <Link
                   to="appointment"
-                  className="btn text-base-100 text-sm uppercase font-bold bg-gradient-to-r from-accent to-primary px-7"
+                  className="btn text-base-100 text-sm uppercase bg-gradient-to-r from-accent to-primary px-3 md:px-5"
                 >
                   BOOK APPOINTMENT
                 </Link>
@@ -159,9 +162,6 @@ const Navbar = () => {
                 </li>
                 <li className="font-bold">
                   <NavLink to="/about">About Us</NavLink>
-                </li>
-                <li className="font-bold">
-                  <NavLink to="review">Reviews</NavLink>
                 </li>
                 <li className="font-bold">
                   <NavLink to="blogs">Blogs</NavLink>

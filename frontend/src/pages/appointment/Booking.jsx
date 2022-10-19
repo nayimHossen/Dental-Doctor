@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 
 const Booking = ({ treatment, date, setTreatment, refetch }) => {
   const [user] = useAuthState(auth);
+  console.log(user);
   const formatedDate = format(date, `PP`);
   const { _id, name, slots } = treatment;
 
@@ -80,7 +81,6 @@ const Booking = ({ treatment, date, setTreatment, refetch }) => {
 
             <div className="form-control mb-2">
               <input
-                disabled
                 name="name"
                 value={user?.displayName}
                 type="text"

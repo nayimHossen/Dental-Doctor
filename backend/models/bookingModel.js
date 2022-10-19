@@ -34,7 +34,6 @@ const bookingSchema = new mongoose.Schema({
   },
   patientName: {
     type: String,
-    required: [true, "Please Enter patient name"],
   },
   patientPhone: {
     type: Number,

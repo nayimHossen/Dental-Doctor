@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../shared/Loading";
+import { toast } from "react-toastify";
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
@@ -40,17 +41,17 @@ const Register = () => {
   }
 
   if (user || gUser) {
-    // console.log(user || gUser);
+    toast.success("Register successfull");
   }
 
   const onSubmit = async (data) => {
-    createUserWithEmailAndPassword(data.email, data.password);
+    await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
     navigate("/appointment");
   };
 
   return (
-    <div className="flex pt-8 sm:pt-16  px-2 justify-center items-center">
+    <div className="flex pt-8 pb-16 px-2 justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl border-2">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Registr</h2>
@@ -63,7 +64,7 @@ const Register = () => {
               <input
                 name="name"
                 type="text"
-                placeholder="Your Email"
+                placeholder="Your name"
                 className="input input-bordered w-full max-w-xs"
                 {...register("name", {
                   required: {

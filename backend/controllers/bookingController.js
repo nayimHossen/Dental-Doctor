@@ -26,3 +26,19 @@ exports.saveBooking = catchAsyncError(async (req, res, next) => {
     booking,
   });
 });
+
+//GET BOOKING FOR INDEVGUL USER
+exports.getBookings = catchAsyncError(async (req, res, next) => {
+  const patient = req.query.patient;
+  const bookings = await Booking.find({ patientEmail: patient });
+  console.log(bookings);
+
+  if (!bookings) {
+    return next(new ErrorHandler("Booking not found", 404));
+  }
+
+  res.status(200).json({
+    success: true,
+    bookings,
+  });
+});
