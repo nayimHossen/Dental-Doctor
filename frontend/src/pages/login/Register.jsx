@@ -2,13 +2,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../shared/Loading";
-import { toast } from "react-toastify";
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import useToken from "../../hooks/useToken";
 
 const Register = () => {
   const {
@@ -23,6 +23,9 @@ const Register = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const [token] = useToken(user || gUser);
+  // console.log(user);
 
   const navigate = useNavigate();
 
@@ -40,14 +43,13 @@ const Register = () => {
     );
   }
 
-  if (user || gUser) {
-    toast.success("Register successfull");
+  if (token) {
+    navigate("/appointment");
   }
 
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigate("/appointment");
   };
 
   return (

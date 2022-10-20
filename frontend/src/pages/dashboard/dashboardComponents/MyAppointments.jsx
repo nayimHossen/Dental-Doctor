@@ -25,7 +25,9 @@ function MyAppointments() {
   }
   return (
     <div>
-      <h1>MyAppointments: {appointment?.bookings.length}</h1>
+      <h1 className="font-bold">
+        Appointments: {appointment?.bookings.length}
+      </h1>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
