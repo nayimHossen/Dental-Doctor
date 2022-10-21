@@ -5,6 +5,7 @@ import Reviews from "./pages/review/Reviews";
 import Appointment from "./pages/appointment/Appointment";
 import Dashboard from "./pages/dashboard/Dashboard";
 import RequireAuth from "./pages/login/RequireAuth";
+import RequireAdmin from "./pages/login/RequireAdmin";
 import Contact from "./pages/contact/Contact";
 import Blogs from "./pages/blogs/Blogs";
 import Login from "./pages/login/Login";
@@ -43,7 +44,14 @@ function App() {
         >
           <Route index element={<MyAppointments />} />
           <Route path="review" element={<MyReview />} />
-          <Route path="users" element={<Users />} />
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users />
+              </RequireAdmin>
+            }
+          />
         </Route>
 
         <Route path="review" element={<Reviews />} />
