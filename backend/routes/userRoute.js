@@ -1,8 +1,17 @@
 const express = require("express");
-const { registerUser } = require("../controllers/userController");
+const {
+  registerUser,
+  getAllUsers,
+  makeAdmin,
+  getAdmin,
+} = require("../controllers/userController");
+const verifyJWT = require("../middleware/verifyJWT");
 
 const router = express.Router();
 
 router.route("/user/:email").put(registerUser);
+router.route("/user/admin/:email").put(verifyJWT, makeAdmin);
+router.route("/users").get(verifyJWT, getAllUsers);
+router.route("/admin/:email").get(verifyJWT, getAdmin);
 
 module.exports = router;

@@ -7,7 +7,6 @@ const jwt = require("jsonwebtoken");
 exports.registerUser = catchAsyncError(async (req, res, next) => {
   const email = req.params.email;
   const userInfo = req.body;
-  console.log(email, req.body);
 
   const filter = { email: email };
   const options = { upsert: true };
@@ -24,6 +23,55 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
     success: true,
     user,
     token,
+  });
+});
+
+//MAKE AN ADMIN
+exports.makeAdmin = catchAsyncError(async (req, res, next) => {
+  const email = req.params.email;
+
+  const requester = req.decoded.email;
+  const requesterAccount = await User.findOne({ email: requester });
+  if (requesterAccount.role === "admin") {
+    const filter = { email: email };
+    const options = { upsert: true };
+    const updateDoc = {
+      $set: { role: "admin" },
+    };
+
+    const result = await User.updateOne(filter, updateDoc, options);
+
+    res.status(200).json({
+      success: true,
+      result,
+    });
+  } else {
+    res.status(403).json({
+      success: false,
+      message: "forbidden",
+    });
+  }
+});
+
+//GET ALL USER
+exports.getAllUsers = catchAsyncError(async (req, res, next) => {
+  const user = await User.find();
+
+  res.status(200).json({
+    success: true,
+    user,
+  });
+});
+
+//GET ADMIN
+exports.getAdmin = catchAsyncError(async (req, res, next) => {
+  const email = req.params.email;
+  const user = await User.findOne({ email: email });
+  const isAdmin = user.role === "admin";
+
+  res.status(200).json({
+    success: true,
+    admin: isAdmin,
   });
 });
 

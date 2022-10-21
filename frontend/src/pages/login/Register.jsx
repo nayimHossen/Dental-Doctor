@@ -25,7 +25,6 @@ const Register = () => {
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
   const [token] = useToken(user || gUser);
-  // console.log(user);
 
   const navigate = useNavigate();
 

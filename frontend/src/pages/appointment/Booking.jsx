@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 const Booking = ({ treatment, date, setTreatment, refetch }) => {
   const [user] = useAuthState(auth);
-  console.log(user);
   const formatedDate = format(date, `PP`);
   const { _id, name, slots } = treatment;
 
@@ -35,7 +34,6 @@ const Booking = ({ treatment, date, setTreatment, refetch }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.success) {
           toast.success(`appointment is set, ${formatedDate} at ${slot}`);
         } else {
