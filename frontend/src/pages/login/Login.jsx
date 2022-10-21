@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "../shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const {
@@ -20,11 +21,19 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [token] = useToken(user || gUser);
+
   let signInError;
   const location = useLocation();
   const navigate = useNavigate();
 
   let from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate]);
 
   if (loading || gLoading) {
     return <Loading />;
@@ -36,10 +45,6 @@ const Login = () => {
         {error?.message || gError?.message}
       </p>
     );
-  }
-
-  if (user || gUser) {
-    navigate(from, { replace: true });
   }
 
   const onSubmit = (data) => {

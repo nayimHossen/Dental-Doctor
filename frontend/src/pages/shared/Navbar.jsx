@@ -34,6 +34,11 @@ const Navbar = () => {
     return <Loading />;
   }
 
+  const logout = () => {
+    signOut(auth);
+    localStorage.removeItem("accessToken");
+  };
+
   // active link
 
   return (
@@ -111,7 +116,7 @@ const Navbar = () => {
                   )}
                   <li className="font-bold">
                     {user ? (
-                      <button onClick={() => signOut(auth)}>Logout</button>
+                      <button onClick={logout}>Logout</button>
                     ) : (
                       <NavLink to="login">Login</NavLink>
                     )}

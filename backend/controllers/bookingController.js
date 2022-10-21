@@ -30,15 +30,19 @@ exports.saveBooking = catchAsyncError(async (req, res, next) => {
 //GET BOOKING FOR INDEVGUL USER
 exports.getBookings = catchAsyncError(async (req, res, next) => {
   const patient = req.query.patient;
-  const bookings = await Booking.find({ patientEmail: patient });
-  console.log(bookings);
+  const decodedEmail = req.decoded.email;
 
-  if (!bookings) {
-    return next(new ErrorHandler("Booking not found", 404));
+  if (patient === decodedEmail) {
+    const bookings = await Booking.find({ patientEmail: patient });
+
+    return res.status(200).json({
+      success: true,
+      bookings,
+    });
+  } else {
+    return res.status(403).json({
+      success: false,
+      message: "forbidden access",
+    });
   }
-
-  res.status(200).json({
-    success: true,
-    bookings,
-  });
 });
