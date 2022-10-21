@@ -11,7 +11,7 @@ const Users = () => {
     error,
     refetch,
   } = useQuery(["users"], () =>
-    fetch(`http://localhost:5000/api/v1/users`, {
+    fetch(`https://dental-doctor.onrender.com/api/v1/users`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

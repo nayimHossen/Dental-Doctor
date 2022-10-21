@@ -16,9 +16,9 @@ const AvailableAppointment = ({ date }) => {
     error,
     refetch,
   } = useQuery(["available", formatedDate], () =>
-    fetch(`http://localhost:5000/api/v1/available?date=${formatedDate}`).then(
-      (res) => res.json()
-    )
+    fetch(
+      `https://dental-doctor.onrender.com/api/v1/available?date=${formatedDate}`
+    ).then((res) => res.json())
   );
 
   if (isLoading) {

@@ -16,12 +16,15 @@ function MyAppointments() {
     isLoading,
     error,
   } = useQuery(["appointment", user], () =>
-    fetch(`http://localhost:5000/api/v1/bookings?patient=${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    }).then((res) => {
+    fetch(
+      `https://dental-doctor.onrender.com/api/v1/bookings?patient=${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    ).then((res) => {
       if (res.status === 401 || res.status === 403) {
         signOut(auth);
         localStorage.removeItem("accessToken");

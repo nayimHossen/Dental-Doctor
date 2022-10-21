@@ -25,7 +25,7 @@ const Booking = ({ treatment, date, setTreatment, refetch }) => {
       patientPhone: phone,
     };
 
-    fetch(`http://localhost:5000/api/v1/booking/new`, {
+    fetch(`https://dental-doctor.onrender.com/api/v1/booking/new`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -4,7 +4,7 @@ function UserRow({ user, index, refetch }) {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`http://localhost:5000/api/v1/user/admin/${email}`, {
+    fetch(`https://dental-doctor.onrender.com/api/v1/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
