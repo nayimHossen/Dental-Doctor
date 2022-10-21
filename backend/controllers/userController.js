@@ -16,7 +16,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
 
   const user = await User.updateOne(filter, updateDoc, options);
   const token = jwt.sign({ email: email }, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "1h",
+    expiresIn: process.env.JWT_EXPIRE,
   });
 
   res.status(200).json({

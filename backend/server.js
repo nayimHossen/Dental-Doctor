@@ -16,6 +16,10 @@ dotenv.config({ path: "backend/config/config.env" });
 //DATABASE CONNECTION
 connectDatabase();
 
+app.get("/", (req, res) => {
+  res.send("Api working");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is working on http://localhost:${process.env.PORT}`);
 });
