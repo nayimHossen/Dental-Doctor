@@ -40,6 +40,9 @@ const Navbar = () => {
   };
 
   // active link
+  let activeStyle = {
+    color: "blue",
+  };
 
   return (
     <header>
@@ -98,27 +101,69 @@ const Navbar = () => {
               <div>
                 <ul className="flex md:gap-3 lg:gap-6">
                   <li className="font-bold">
-                    <NavLink to="home">Home</NavLink>
+                    <NavLink
+                      to="/home"
+                      style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                      }
+                    >
+                      Home
+                    </NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="about">About</NavLink>
+                    <NavLink
+                      to="about"
+                      style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                      }
+                    >
+                      About
+                    </NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="blogs">Blogs</NavLink>
+                    <NavLink
+                      to="blogs"
+                      style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                      }
+                    >
+                      Blogs
+                    </NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink to="contact">Contact</NavLink>
+                    <NavLink
+                      to="contact"
+                      style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                      }
+                    >
+                      Contact
+                    </NavLink>
                   </li>
                   {user && (
                     <li className="font-bold">
-                      <NavLink to="/dashboard">Dashboard</NavLink>
+                      <NavLink
+                        to="/dashboard"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
+                      >
+                        Dashboard
+                      </NavLink>
                     </li>
                   )}
                   <li className="font-bold">
                     {user ? (
                       <button onClick={logout}>Logout</button>
                     ) : (
-                      <NavLink to="login">Login</NavLink>
+                      <NavLink
+                        to="login"
+                        style={({ isActive }) =>
+                          isActive ? activeStyle : undefined
+                        }
+                      >
+                        Login
+                      </NavLink>
                     )}
                   </li>
                 </ul>

@@ -27,7 +27,6 @@ const AvailableAppointment = ({ date }) => {
   if (error) {
     toast.error(error);
   }
-
   return (
     <div>
       <div className="text-center py-16">
