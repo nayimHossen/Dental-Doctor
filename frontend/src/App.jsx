@@ -18,6 +18,7 @@ import MyReview from "./pages/dashboard/dashboardComponents/MyReview";
 import MyAppointments from "./pages/dashboard/dashboardComponents/MyAppointments";
 import Users from "./pages/dashboard/dashboardComponents/Users";
 import AddDoctor from "./pages/dashboard/dashboardComponents/AddDoctor";
+import ManageDoctors from "./pages/dashboard/dashboardComponents/ManageDoctors";
 
 function App() {
   return (
@@ -58,6 +59,14 @@ function App() {
             element={
               <RequireAdmin>
                 <AddDoctor />
+              </RequireAdmin>
+            }
+          />
+          <Route
+            path="doctors"
+            element={
+              <RequireAdmin>
+                <ManageDoctors />
               </RequireAdmin>
             }
           />

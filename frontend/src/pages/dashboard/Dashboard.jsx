@@ -49,7 +49,10 @@ const Dashboard = () => {
                   <Link to="/dashboard/users">All User</Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/addDoctor">Add a doctor</Link>
+                  <Link to="/dashboard/addDoctor">Add Doctor</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard/doctors">All Doctors</Link>
                 </li>
               </>
             )}
