@@ -1,11 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const AddDoctor = () => {
   const {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
   const imageStorageky = "17cff9a2ec79367bea2e84bf7b3aa508";
@@ -44,7 +46,12 @@ const AddDoctor = () => {
           })
             .then((res) => res.json())
             .then((inserted) => {
-              console.log(inserted);
+              if (inserted.success === true) {
+                toast.success("Doctor added success");
+                reset();
+              } else {
+                toast.error("Faild to add doctor");
+              }
             });
         }
       });
@@ -227,14 +234,14 @@ const AddDoctor = () => {
                 })}
               />
               <label className="label p-[2px]">
-                {errors.pImage?.type === "required" && (
+                {errors.image?.type === "required" && (
                   <span className="label-text-alt text-red-500">
-                    {errors.pImage.message}
+                    {errors.image.message}
                   </span>
                 )}
-                {errors.pImage?.type === "pattern" && (
+                {errors.image?.type === "pattern" && (
                   <span className="label-text-alt text-red-500">
-                    {errors.pImage.message}
+                    {errors.image.message}
                   </span>
                 )}
               </label>
