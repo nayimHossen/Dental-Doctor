@@ -3,6 +3,6 @@ const { createDoctor } = require("../controllers/doctorController");
 
 const router = express.Router();
 
-router.route("/addDoctor").get(createDoctor);
+router.route("/doctor/new").post(createDoctor);
 
 module.exports = router;

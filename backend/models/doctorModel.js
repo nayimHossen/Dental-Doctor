@@ -15,7 +15,7 @@ const doctorSchema = new mongoose.Schema({
     required: [true, "Please Enter Number"],
   },
   address: {
-    type: Number,
+    type: String,
     required: [true, "Please Enter address"],
   },
   specialty: {

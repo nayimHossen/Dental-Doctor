@@ -2,8 +2,9 @@ const Doctor = require("../models/doctorModel");
 const ErrorHandler = require("../utlis/errorHandler");
 const catchAsyncError = require("../middleware/catchAsyncError");
 
-//CREATE SERVICES -- ADMIN
+//CREATE DOCTOR -- ADMIN
 exports.createDoctor = catchAsyncError(async (req, res, next) => {
+  console.log(req.body);
   const doctor = await Doctor.create(req.body);
 
   res.status(201).json({

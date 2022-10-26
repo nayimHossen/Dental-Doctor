@@ -27,12 +27,25 @@ const AddDoctor = () => {
           const doctor = {
             name: data.name,
             email: data.email,
-            phome: data.phone,
+            phone: Number(data.phone),
             address: data.address,
             specialty: data.specialty,
             image: image,
           };
-          console.log(doctor);
+
+          //DATA SEND DATABASE
+          fetch(`http://localhost:5000/api/v1/doctor/new`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+            body: JSON.stringify(doctor),
+          })
+            .then((res) => res.json())
+            .then((inserted) => {
+              console.log(inserted);
+            });
         }
       });
   };
