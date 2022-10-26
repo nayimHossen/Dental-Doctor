@@ -17,6 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MyReview from "./pages/dashboard/dashboardComponents/MyReview";
 import MyAppointments from "./pages/dashboard/dashboardComponents/MyAppointments";
 import Users from "./pages/dashboard/dashboardComponents/Users";
+import AddDoctor from "./pages/dashboard/dashboardComponents/AddDoctor";
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
             element={
               <RequireAdmin>
                 <Users />
+              </RequireAdmin>
+            }
+          />
+          <Route
+            path="addDoctor"
+            element={
+              <RequireAdmin>
+                <AddDoctor />
               </RequireAdmin>
             }
           />

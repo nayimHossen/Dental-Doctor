@@ -12,8 +12,9 @@ app.use(cors());
 const serviceRoute = require("./routes/serviceRoute");
 const bookingRoute = require("./routes/bookingRoute");
 const userRoute = require("./routes/userRoute");
+const doctorRoute = require("./routes/doctorRoute");
 
-app.use("/api/v1", serviceRoute, bookingRoute, userRoute);
+app.use("/api/v1", serviceRoute, bookingRoute, userRoute, doctorRoute);
 
 //MIDDLEWARE FOR ERROR
 app.use(errorMiddleware);
