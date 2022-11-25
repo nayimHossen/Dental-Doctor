@@ -87,7 +87,7 @@ const Navbar = () => {
       {/* Top mini navbar end*/}
 
       {/* navbar */}
-      <nav className={`w-full bg-[#F7FAFD] ${stickyClass}`}>
+      <nav className={`w-full ${stickyClass}`}>
         <div className="flex justify-between items-center py-5 container mx-auto relative px-5">
           {/* md and lg navigation start*/}
           <div>

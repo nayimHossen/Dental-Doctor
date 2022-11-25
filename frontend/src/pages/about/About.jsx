@@ -1,11 +1,13 @@
 import React from "react";
 import AboutSection from "../home/AboutSection";
+import AboutBanner from "./AboutBanner";
 
 const About = () => {
   return (
-    <div>
+    <>
+      <AboutBanner />
       <AboutSection />
-    </div>
+    </>
   );
 };
 
