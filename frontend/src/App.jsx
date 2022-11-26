@@ -7,7 +7,6 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import RequireAuth from "./pages/login/RequireAuth";
 import RequireAdmin from "./pages/login/RequireAdmin";
 import Contact from "./pages/contact/Contact";
-import Blogs from "./pages/blogs/Blogs";
 import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import Footer from "./pages/shared/Footer";
@@ -19,6 +18,7 @@ import MyAppointments from "./pages/dashboard/dashboardComponents/MyAppointments
 import Users from "./pages/dashboard/dashboardComponents/Users";
 import AddDoctor from "./pages/dashboard/dashboardComponents/AddDoctor";
 import ManageDoctors from "./pages/dashboard/dashboardComponents/ManageDoctors";
+import BlogPage from "./pages/blog/BlogPage";
 
 function App() {
   return (
@@ -73,7 +73,7 @@ function App() {
         </Route>
 
         <Route path="review" element={<Reviews />} />
-        <Route path="blogs" element={<Blogs />} />
+        <Route path="blogs" element={<BlogPage />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />

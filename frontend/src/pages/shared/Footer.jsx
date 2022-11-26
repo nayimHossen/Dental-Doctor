@@ -14,7 +14,7 @@ const Footer = () => {
                     Dentelo.
                   </h2>
                 </Link>
-                <p className="mb-5 text-neutral">
+                <p className="mb-5 text-neutral text-sm">
                   Mauris non nisi semper, lacinia neque in, dapibus leo.
                   Curabitur sagittis libero tincidunt tempor finibus. Mauris at
                   dignissim ligula, nec tristique orci.Quisque vitae metus.
@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
               <div className="flex justify-start items-center gap-3">
                 <i className="ri-time-line text-3xl bg-primary p-2 rounded"></i>
-                <div className="text-neutral">
+                <div className="text-neutral text-sm">
                   <h2>Monday-Saturday:</h2>
                   <h2>9:00am-10:00pm</h2>
                 </div>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold">Others Links</h2>
-            <ul className="mt-5">
+            <ul className="mt-5 text-sm">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
                 <i className="ri-add-line text-primary"></i>
                 <Link to="/home">Home</Link>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold">Our Services</h2>
-            <ul className="mt-5">
+            <ul className="mt-5 text-sm">
               <li className="flex justify-start text-neutral gap-1 mb-3 hover:text-base-100">
                 <i className="ri-add-line text-primary"></i>
                 <Link to="#">Root Canal</Link>
@@ -88,7 +88,7 @@ const Footer = () => {
 
             <div className="flex justify-start items-center gap-3 mb-3">
               <i className="ri-map-pin-line text-3xl bg-primary p-2 rounded"></i>
-              <div className="text-neutral">
+              <div className="text-neutral text-sm">
                 <h4>1247/Plot No. 39, 15th Phase</h4>
                 <h2>LHB Colony, Kanpur</h2>
               </div>
@@ -96,14 +96,14 @@ const Footer = () => {
 
             <div className="flex justify-start items-center gap-3 mb-3">
               <i className="ri-phone-fill text-3xl bg-primary p-2 rounded"></i>
-              <div className="text-neutral">
+              <div className="text-neutral text-sm">
                 <h4>+91-7052-101-786</h4>
               </div>
             </div>
 
             <div className="flex justify-start items-center gap-3 mb-3">
               <i className="ri-mail-line text-3xl bg-primary p-2 rounded"></i>
-              <div className="text-neutral">
+              <div className="text-neutral text-sm">
                 <h4>help@example.com</h4>
               </div>
             </div>
@@ -113,10 +113,8 @@ const Footer = () => {
 
       <div className="p-4 bg-[#222] text-base-100">
         <div className="flex justify-center items-center">
-          <p>
-            <small>
-              Copyright © 2022 - All right reserved: mail.nayimhossen@gmail.com
-            </small>
+          <p className="text-xs">
+            Copyright © 2022 - All right reserved: mail.nayimhossen@gmail.com
           </p>
         </div>
       </div>

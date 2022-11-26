@@ -1,0 +1,31 @@
+import { Link } from "react-router-dom";
+
+const Blog = ({ blog }) => {
+  const { description, title, img } = blog;
+
+  return (
+    <div className="shadow-lg bg-white border-2 rounded relative">
+      <figure className="pb-2 relative">
+        {/* blog image */}
+        <img className="ease-in h-60 w-full" src={img} alt="Shoes" />
+        {/* Date badge */}
+        <div className="flex gap-2 badge-primary bottom-8 left-5 text-base-100 p-2 rounded absolute">
+          <i className="ri-calendar-todo-fill"></i>
+          <p>24th March 2022</p>
+        </div>
+      </figure>
+
+      {/* blog info */}
+      <div className="p-5">
+        <h2 className="text-xl text-accent font-bold py-2 hover:text-primary">
+          <Link to="#">{title}</Link>
+        </h2>
+        <p className="text-[16px] text-natural font-medium pb-4 ">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
