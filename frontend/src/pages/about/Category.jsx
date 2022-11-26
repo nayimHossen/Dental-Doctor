@@ -25,12 +25,12 @@ const Category = () => {
   ];
 
   return (
-    <section className="container mx-auto px-5 py-16 bg-[#f7fafd] ">
+    <section className="container mx-auto px-5 py-10 bg-[#f7fafd] ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {categorys.map((category) => (
           <div key={category._id}>
             <div className="p-5 py-10 bg-white shadow-lg">
-              <p className="text-5xl mb-2 text-primary">{category.icon}</p>
+              <p className="text-6xl mb-2 text-primary">{category.icon}</p>
               <p className="text-accent text-sm font-bold">{category.title}</p>
             </div>
           </div>
