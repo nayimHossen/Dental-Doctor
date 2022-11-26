@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Doctor = ({ doctor }) => {
   const { designation, name, img } = doctor;
   return (
-    <div className="card lg:max-w-lg bg-base-100 border-2 shadow-xl">
+    <div className="card lg:max-w-lg bg-base-100 border rounded-md shadow-xl">
       <figure className="px-10 pt-10">
         <img src={img} alt="Shoes" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title font-bold text-2xl hover:text-primary">
+        <h2 className="card-title font-bold text-xl hover:text-primary">
           {name}
         </h2>
         <p className="font-bold text-primary py-2">{designation}</p>

@@ -172,7 +172,7 @@ const Navbar = () => {
               <div>
                 <Link
                   to="appointment"
-                  className="btn text-base-100 text-sm uppercase bg-gradient-to-r from-accent to-primary px-3 md:px-5"
+                  className="btn rounded-md text-base-100 text-sm uppercase bg-gradient-to-r from-accent to-primary px-3 md:px-5"
                 >
                   BOOK APPOINTMENT
                 </Link>

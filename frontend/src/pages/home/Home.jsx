@@ -5,6 +5,7 @@ import BookAppiontment from "./BookAppiontment";
 import Doctors from "./Doctors";
 import Blogs from "./Blogs";
 import Services from "./Services";
+import ReviewCart from "./ReviewMain";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Doctors />
       <BookAppiontment />
       <Blogs />
+      <ReviewCart />
     </>
   );
 };

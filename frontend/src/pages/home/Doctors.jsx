@@ -32,7 +32,7 @@ function Doctors() {
     },
   ];
   return (
-    <section className="container mx-auto px-5 pt-16 pb-32">
+    <section className="container mx-auto px-5 pt-16 pb-16">
       <div className="text-center mb-3 md:mb-8 lg:mb-16">
         <p className="text-base md:text-xl lg:text-2xl font-bold uppercase text-primary mb-1 md:mb-3 lg:mb-4">
           OUR DOCTORS

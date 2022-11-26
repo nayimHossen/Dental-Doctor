@@ -4,15 +4,14 @@ const Blog = ({ blog }) => {
   const { description, title, img } = blog;
 
   return (
-    <div className="shadow-lg border-2 rounded relative">
+    <div className="shadow-lg bg-white border-2 rounded relative">
       <figure className="pb-2 relative">
         {/* blog image */}
         <img
-          className="ease-in duration-500 hover:scale-95"
+          className="ease-in duration-500 hover:scale-95 h-60 w-full"
           src={img}
           alt="Shoes"
         />
-
         {/* Date badge */}
         <div className="flex gap-2 badge-primary bottom-8 left-5 text-base-100 p-2 rounded absolute">
           <i className="ri-calendar-todo-fill"></i>
