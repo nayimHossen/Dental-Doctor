@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="bg-accent py-3 hidden md:block">
         <div className="flex justify-between container mx-auto px-5">
           <div>
-            <ul className="flex gap-3">
+            <ul className="flex gap-3 text-sm">
               <li className="flex justify-center items-center gap-2">
                 <i className="ri-mail-line text-secondary"></i>
                 <Link to="mailto:info@example.com" className="text-base-100">
