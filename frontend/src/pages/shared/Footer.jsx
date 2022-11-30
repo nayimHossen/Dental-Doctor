@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BottomToTop from "./BottomToTop";
 
 const Footer = () => {
   return (
     <footer>
+      <BottomToTop />
       <div className="bg-accent py-16">
         <div className="grid px-5 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto text-base-100">
           <div>
